@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>u_requested_for_email</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>UsernameAutoPopulate</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+	//Type appropriate comment here, and begin script below
+	//var caller = g_form.getReference('u_requested_for');
+	var caller = g_form.getReference('u_requested_for');
+	g_form.setValue('u_emailusername',u_requested_for.email.slice(0,caller.indexOf('@')));
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-01 05:31:58</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3af2203897302110b8467b771153af3f</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>UsernameAutoPopulate</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_script_client_3af2203897302110b8467b771153af3f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-01 05:47:18</sys_updated_on>
+        <table>x_58872_needit_needit</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</application>
+        <file_path/>
+        <instance_id>f4ff9f32db7494d0d5c911f848961914</instance_id>
+        <instance_name>dev104339</instance_name>
+        <name>sys_script_client_3af2203897302110b8467b771153af3f</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field&gt;u_requested_for_email&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;UsernameAutoPopulate&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+	//Type appropriate comment here, and begin script below
+	//var caller = g_form.getReference('u_requested_for');
+	var caller = g_form.getReference('u_requested_for');
+	g_form.setValue('u_emailusername',u_requested_for.email.slice(0,caller.indexOf('@')));
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-02-01 05:31:58&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;3af2203897302110b8467b771153af3f&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_name&gt;UsernameAutoPopulate&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="NeedIt" source="x_58872_needit"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="NeedIt"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_3af2203897302110b8467b771153af3f&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-02-01 05:47:18&lt;/sys_updated_on&gt;&lt;table&gt;x_58872_needit_needit&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-2106526985</payload_hash>
+        <record_name>UsernameAutoPopulate</record_name>
+        <reverted_from/>
+        <source>6d3adb61976ca110b8467b771153afed</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-01 05:47:18</sys_created_on>
+        <sys_id>3b09e0f897302110b8467b771153afb3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1860b83e5430000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-01 05:47:18</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>3309e0f8453021100c78a10cdf30b6b3</update_guid>
+        <update_guid_history>3309e0f8453021100c78a10cdf30b6b3:-2106526985,85b624f8a7302110da88b3e387b93fa8:1318370242,729624f8253021101285db777ae34f73:-1573054401,af8664b80730211016c4a16f0723aab2:562267108,0b852038b03021101f5036c7a2e96049:-893842187</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-01 05:48:34</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>9d969bc62eca4a5aaef2ec5aeeb54661</sys_id>
+        <sys_metadata>3af2203897302110b8467b771153af3f</sys_metadata>
+        <sys_name>UsernameAutoPopulate</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_parent display_value="NeedIt">afa7fba397946110b8467b771153af6f</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_scope_delete display_value="">94872a8897db403e8ee69a431de2fca4</sys_scope_delete>
+        <sys_update_name>sys_script_client_3af2203897302110b8467b771153af3f</sys_update_name>
+        <sys_update_version display_value="sys_script_client_3af2203897302110b8467b771153af3f">3b09e0f897302110b8467b771153afb3</sys_update_version>
+    </sys_metadata_delete>
+</record_update>
